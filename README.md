@@ -32,3 +32,5 @@
 }
 
 ```
+- After this run `npx sequelize db:create`
+   - DB will be created, you can check it by `show databases`
