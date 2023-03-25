@@ -1,9 +1,12 @@
 const express = require("express");
+
+const { PORT } = require("./config/serverConfig");
+const ApiRoutes = require("./routes");
+
 const app = express();
 app.use(express.json());
 
-const { PORT } = require("./config/serverConfig");
-
+app.use("/api", ApiRoutes);
 app.listen(PORT, async () => {
   console.log(`App is running at PORT: ${PORT}...`);
 });
